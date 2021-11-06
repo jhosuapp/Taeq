@@ -1,0 +1,255 @@
+.limit_receta{
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: 20px;
+}
+
+
+@media (max-width: breakpoints('ipad-pequeña')){
+    .limit_receta{
+        padding-top: 105px;
+    }
+}
+
+//CALCULA INGREDIENTES
+
+.calcula-ingredientes{
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: 20px;
+    &__contenedor{
+        width: 100%;
+        @include flex;
+    }
+    &__contenido{
+        width: 30%;
+    }
+    &__parrafo{
+        color: colorLighten('footer-texto', 5);
+    }
+}
+
+@media (max-width: breakpoints('ipad-pequeña')){
+    .calcula-ingredientes{
+        &__contenedor{
+            flex-direction: column;
+        }
+        &__contenido{
+            width: 100%;
+        }
+        &__parrafo{
+            color: colorLighten('footer-texto', 5);
+        }
+    }
+}
+
+//PREPARACION
+
+.preparacion{
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: 20px;
+    &__contenedor{
+        @include flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__items{
+        width: 31%;
+        background: color('recetas');
+        padding: 50px 20px 20px 20px;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 20px;
+    }
+    &__descripcion{
+        color: colorLighten('footer-texto', 5);
+    }
+    &__pasos{
+        background: color('naranja');
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid color('primario');
+        border-radius: 100px;
+        position: absolute;
+        top: -25px;
+        left: calc(50% - 27.5px);
+    }
+    &__numeros{
+        text-align: center;
+        color: color('primario');
+        font-size: font('subtitulos-recetas');
+    }
+}
+
+//INGREDIENTE
+.ingrediente-calorias{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: 20px;
+}
+.ingrediente{
+    width: 49%;
+    padding: 20px 80px;
+    border: 1.5px solid color('naranja');
+    text-align: center;
+    &__titulo{
+        font-size: font('ingrediente-titulo');
+        color: color('naranja');
+        margin-bottom: 10px;
+    }
+    &__contenedor-pasos{
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    &__contenedor-middle{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: auto;
+    }
+    &__numero{
+        border: 1.5px solid color('naranja');
+        border-radius: 100px;
+        padding: 5px;
+        color: color('naranja');
+        font-size: font('ingrediente-numero');
+    }
+    &__descripcion{
+        font-size: font('ingrediente-descripcion');
+        color: color('footer-texto');
+        font-weight: lighter;
+    }
+    &__border{
+        height: 1.5px;
+        width: 70%;
+        background: color('naranja');
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__tiempo{
+
+        &-texto{
+            color: color('footer-texto');
+            font-size: font('ingrediente-descripcion');
+            margin-bottom: 20px;
+        }
+        &-contenedor{
+            @include flex;
+            gap: 10px;
+        }
+        &-horas{
+            color: color('footer-texto');
+            font-size: font('ingrediente-descripcion');
+        }
+    }
+}
+
+.caloria{
+    &__contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    &__parrafo{
+        color: color('footer-texto');
+        font-size: font('ingrediente-descripcion');
+        flex: 1;
+        &--hidden{
+            color: color('primario');
+        }
+    }
+    &__middle{
+        margin-top: 10px;
+    }
+}
+
+//COMENTARIOS
+
+.comentarios{
+    width: 95%;
+    &__imagen{
+        width: 75px;
+        height: 75px;
+        border-radius: 100px;
+    }
+    &__contenedor{
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    &__bloque{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    &__titulo{
+        font-size: font('ingrediente-titulo');
+        color: color('naranja');
+    }
+    &__fecha,
+    &__descripcion{
+        font-size: font('ingrediente-descripcion');
+        color: color('footer-texto');
+    }
+}
+
+@media (max-width: breakpoints('portatil')){
+    .ingrediente{
+        width: 50%;
+        padding: 20px 20px;
+        &__border{
+            width: 80%;
+        }
+    }
+}
+@media (max-width: breakpoints('ipad-pequeña')){
+    .preparacion{
+        &__items{
+            width: 48%;
+        }
+    }
+    .ingrediente{
+        width: 100%;
+        padding: 20px 40px;
+    }
+    .ingrediente-calorias{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: breakpoints('celular')){
+    .preparacion{
+        &__items{
+            width: 100%;
+        }
+    }
+    .comentarios{
+
+        &__imagen{
+            display: none;
+        }
+        &__contenedor{
+            margin-top: 0;
+        }
+        &__bloque{
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

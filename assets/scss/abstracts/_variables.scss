@@ -1,0 +1,50 @@
+//PALETA DE COLORES
+
+$palette:(
+    'primario': #fff,
+    'secundario': #000,
+    'menu': #6CC049,
+    'boton-naranja': #F19451,
+    'naranja': #F19451,
+    'boton-verde': #6CC049,
+    'footer-color': #E3E3E3,
+    'footer-texto': #494949,
+    'recetas': #F2F2F2,
+    'danger': rgb(209, 65, 65)
+);
+
+//BREAKPOINTS
+
+$breakpoints: (
+    'desktop': 1400px,
+    'portatil': 1200px,
+    'ipad-grande': 992px,
+    'ipad-pequeña': 768px,
+    'celular': 576px
+
+);
+
+//FONT-SIZE
+
+$font-size: (
+    'parrafos': 1.1rem,
+    'subtitulos': 2rem,
+    'card-subtitulo': 1.2rem,
+    'card-descripcion': 1rem,
+    'menu': 1.2rem,
+    'footer': 1.2rem,
+    'botones': 1.4rem,
+    'subtitulos-blog': 1.5rem,
+    'subtitulos-recetas': 1.5rem,
+    'ingrediente-titulo': 20px,
+    'ingrediente-numero':  20px,
+    'ingrediente-descripcion': 16px,
+    'formulario-label': 18px
+);
+
+//OTHERS
+
+$transition-duration: 0.3s;
+$padding-top: 40px;
+$padding-top-resta: 30px;
+$limit-width: 1300px;

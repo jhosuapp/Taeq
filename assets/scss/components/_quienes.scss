@@ -1,0 +1,25 @@
+.quienes{
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: $padding-top;
+    &__imagen{
+        width: 100%;
+        max-height: 65vh;
+        object-fit: cover;
+    }
+    &__parrafo{
+        color: colorLighten('footer-texto', 5);
+    }
+}
+
+@media (max-width: breakpoints('ipad-pequeña')){
+    .quienes{
+        margin-top: 80px;
+        &__imagen{
+            width: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+        }
+    }   
+}

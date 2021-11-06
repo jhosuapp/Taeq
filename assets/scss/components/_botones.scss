@@ -1,0 +1,77 @@
+.boton{
+    position: absolute;
+    bottom: 20%;
+    left: calc(50% - 151px);
+    background: color('boton-verde');
+    outline: inherit;
+    border: none;
+    color: color('primario');
+    padding: 15px 100px;
+    font-size: font('botones');
+    font-weight: bolder;
+    text-transform: uppercase;
+    @include transition($p: background-color);
+    &__link{
+        color: color('primario');
+    }
+    &:hover{
+        background: colorLighten('menu', 10);
+        cursor: pointer;
+    }
+
+
+    //MODIFICADOR
+    &--relative{
+        position: relative;
+        background: color('naranja');
+        &:hover{
+            background: colorLighten('naranja', 10);
+            cursor: pointer;
+        }
+    }
+    &--recetas{
+        left: 0;
+        position: relative;
+    }
+    &--flex{
+        @include flex;
+        gap: 20px;
+        padding: 15px 50px;
+    }
+    &__contenedor{
+        padding: $padding-top 0;
+        &--blog{
+            text-align: center;
+            display: none;
+        }
+        &--recetas{
+            padding: 0;
+            padding-top: $padding-top;
+        }
+    }
+}
+@media (max-width: breakpoints('ipad-pequeña')){
+    .boton{
+        &__contenedor{
+            padding: $padding-top 0;
+            &--blog{
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width:breakpoints('celular')){
+    .boton{
+        padding: 15px 80px;
+        left: calc(50% - 132px);
+        &--recetas{
+            left: 0;
+        }
+        &--flex{
+            @include flex;
+            gap: 10px;
+            padding: 15px 20px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin restart ($m: 0, $p: 0, $b: border-box){
+    margin: $m;
+    padding: $p;
+    box-sizing: $b;
+}
+
+@mixin flex ($d: flex, $jc: center, $ai: center, $ta: center){
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    text-align: $ta;
+}
+
+@mixin transition ($td: 0.5s, $p: all, $ta: ease){
+    transition: $td $p $ta;
+}
+
+@mixin restarLink ($td: none, $color: color('primario')){
+    text-decoration: $td;
+    color: $color;
+}

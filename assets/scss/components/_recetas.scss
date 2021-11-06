@@ -1,0 +1,10 @@
+.recetas{
+    width: 100%;
+    margin:0;
+    background: rgb(0, 0, 0, 0.10);
+    &__contenedor{
+        width: 90%;
+        max-width: $limit-width;
+        margin: auto;
+    }
+}

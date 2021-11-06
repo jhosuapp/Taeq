@@ -1,0 +1,149 @@
+.formulario{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    &__grupo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__grupo-input{
+        position: relative;
+    }
+    &__input{
+        width: 100%;
+        border: none;
+        outline: inherit;
+        border-bottom: 2px solid color('naranja');
+        height: 45px;
+        line-height: 45px;
+        padding: 0 60px;
+        transition: 0.3s all;
+        &:focus{
+            border: 2px solid color('naranja');
+            border-radius: 5px;
+        }
+    }
+    &__validacion-estado{
+        color: color('danger');
+        position: absolute;
+        right: 20px;
+        font-size: 18px;
+        top: calc(50% - 8px);
+        opacity: 0;
+    }
+    &__icono-input{
+        position: absolute;
+        left: 10px;
+        width: 30px;
+        max-height: 30px;
+        top: calc(50% - 15px);
+    }
+    &__input-error{
+        color: color('footer-texto');
+        font-size: 14px;
+        margin: 10px;
+        display: none;
+    }
+    &__mensaje{
+        margin-top: 20px;
+        grid-column: 1/3;
+        width: 100%;
+        padding: 15px 35px;
+        background: color('danger');
+        color: color('primario');
+        text-align: center;
+        display: none;
+    }
+    &__grupo-btn-enviar{
+        grid-column: 1/3;
+        margin: auto;
+        text-align: center;
+        @include flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    &__btn{
+        padding: 10px 40px;
+        max-width: 220px;
+        width: 100%;
+    }
+    &__mensaje-exito{
+        color: color('menu');
+        display: none;
+    }
+    &__label{
+        font-size: font('formulario-label');
+        margin-bottom: 20px;
+        margin-left: 10px;
+        color: color('naranja');
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    &__input__width{
+        height: 200px;
+        width: 100%;
+        border: 2px solid color('naranja');
+        border-radius: 5px;
+        padding: 20px 20px;
+        resize: none;
+        line-height: 1;
+        color: color('naranja');
+        position: relative;
+        outline: inherit;
+        &:hover{
+            border: 2px solid color('naranja');
+        }
+    }
+    &__mensaje-abosulte{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    &__grupo__input-width{
+        grid-column: 1/3;
+        line-height: 2;
+    }
+
+    // Validacion
+
+    &__grupo-correcto .formulario__validacion-estado{
+        color: color('menu');
+        opacity: 1;
+    }
+    &__grupo-incorrecto .formulario__validacion-estado,
+    &__grupo-incorrecto .formulario__label,
+    &__grupo-incorrecto .formulario__input{
+        color: color('danger');
+        opacity: 1;
+        display: block;
+    }
+    &__grupo-incorrecto .formulario__input-error{
+        display: block;
+    }
+    &__grupo-incorrecto .formulario__input{
+        border: 3px solid color('danger');
+        border-radius: 5px;
+    }
+    &__mensaje-activo{
+        display: block;
+    }
+    &__mensaje-exito-activo{
+        display: block;
+    }
+}
+
+@media (max-width: breakpoints('ipad-pequeña')){
+    .formulario{
+        width: 100%;
+        grid-template-columns: 100%;
+        gap: 0;
+        &__grupo{
+            grid-column: 1/3;
+        }
+        &__mensaje{
+            margin-bottom: 20px;
+        }
+    }
+}

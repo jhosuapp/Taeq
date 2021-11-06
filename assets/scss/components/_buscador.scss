@@ -1,0 +1,101 @@
+.buscador{
+    width: 90%;
+    max-width: $limit-width;
+    margin: auto;
+    padding-top: $padding-top;
+    padding-bottom: $padding-top;
+    &--mobile{
+        display: none;
+    }
+    @include flex($ai: flex-end);
+    &__contenedor{
+        position: relative;
+        width: 30%;
+    }
+    &__buscar{
+        outline: inherit;
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid color('naranja');
+        color: color('naranja');
+        width: 100%;
+        height: 43px;
+    }
+    &__icono{
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+    }
+    &__texto{
+        position: absolute;
+        left: 80px;
+        font-size: font('card-subtitulo');
+        top: calc(50% - 10px);
+        pointer-events: none;
+        color: colorDarken('footer-color', 15);
+    }
+}
+
+//Categorias
+
+.categorias{
+    width: 70%;
+    max-width: 300px;
+    position: relative;
+    &--flex{
+        display: flex;
+        gap: 25px;
+        max-width: 325px;   
+    }
+    &__select{
+        width: 90%;
+        padding: 10px 20px;
+        border: 2px solid color('naranja');
+        color: color('naranja');
+        outline: inherit;
+        cursor: pointer;
+        -webkit-appearance: none;
+        font-size: font('card-subtitulo');
+    }
+    &__option{
+        color: color('naranja');
+        cursor: pointer;
+        outline: inherit;
+    }
+    &__icono{
+        position: absolute;
+        top: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+        right: 20px;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: breakpoints('ipad-pequeña')){
+    .buscador{
+        padding-top: 115px;
+        padding-bottom: 0;
+        flex-direction: column;
+        &__contenedor{
+            width: 100%;
+        }
+        &--mobile{
+            display: block;
+        }
+    }
+    .categorias{
+        margin: 20px auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: breakpoints('celular')){
+    .categorias{
+        &--flex{
+            max-width: 155px;
+        }
+    }
+}

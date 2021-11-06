@@ -1,0 +1,215 @@
+ /*EFECT HAMBURGER*/
+ .main-container{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 15px 0;
+    display: none;
+    background: color('primario');
+}
+.hamburger{
+    position: relative;
+}
+ .hamburger__button{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+}
+.hamburger__top-line,
+.hamburger__middle-line,
+.hamburger__bottom-line{
+    border-radius: 5px;
+    background: color('menu');
+    display: block;
+    width: 70%;
+    margin: 5px auto;
+    height: 5px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#hamburger.open button .hamburger__top-line{
+    animation-name: top-line-animation;
+}
+#hamburger.open button .hamburger__middle-line{
+    animation-name: middle-line-animation;
+}
+#hamburger.open button .hamburger__bottom-line{
+    animation-name: bottom-line-animation;
+}
+#hamburger button .hamburger__top-line{
+    animation-name: top-line-animation-close;
+}
+#hamburger button .hamburger__middle-line{
+    animation-name: middle-line-animation-close;
+}
+#hamburger button .hamburger__bottom-line{
+    animation-name: bottom-line-animation-close;
+}
+
+/*EFECT LEFT*/
+
+.main-list{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: color('menu');
+    height: 101vh;
+    width: 40vw;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.main-list__text{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: -10px;
+        max-height: 2px;
+        background: color('primario');
+    }
+}
+.main-list.active{
+    transform: translateX(0);
+    pointer-events: all;
+    opacity: 1;
+}
+.main-list__link{
+    margin-left: 30px;
+    text-decoration: none;
+    color: color('primario');
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: relative;
+    font-size: font('menu');
+}
+
+/*ANIMATION*/
+
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(5px) rotate(-45deg);
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-5px) rotate(45deg);
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(5px) rotate(-45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0) rotate(0);
+    }
+}
+@keyframes middle-line-animation-close{
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        width: 70%;
+        opacity: 1;
+    }
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-5px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0) rotate(0);
+
+    }
+}
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(5px) rotate(-45deg);
+        background-color: color('primario');
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+        background-color: color('primario');
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-5px) rotate(45deg);
+        background-color: color('primario');
+    }
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: breakpoints('ipad-pequeña')){
+    .main-container{
+        display: block;
+    }
+    .main-list{
+        width: 100vw;
+        z-index: -1;
+    }
+    .main-list__link{
+        margin: 0;
+    }
+    .main-list{
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        @include flex($jc: space-between);
+    }
+    .menu__paragraph{
+        width: 70px;
+        z-index: -9;
+    }
+    .menu__link--burger{
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .hamburger{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+}

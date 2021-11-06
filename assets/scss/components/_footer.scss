@@ -1,0 +1,108 @@
+.footer{
+    width: 100%;
+    background-color: color('footer-color');
+    margin-top: 60px;
+    &__contenedor{
+        @include flex($jc: space-between);
+        width: 90%;
+        margin: auto;
+        max-width: $limit-width;
+        padding: {
+            top: 50px;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__links{
+        font-size: font('footer');
+        color: color('footer-texto');
+        cursor: pointer;
+    }
+    &__links--separador{
+        position: relative;
+        margin-right: 10px;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 60%;
+            top: calc(50% - 30%);
+            right: -10px;
+            background-color: color('footer-texto');
+        }
+    }
+    &__redes{
+        display: flex;
+        gap: 35px;
+        position: relative;
+    }
+    &__iconos{
+        width: 35px;
+        height: 35px;
+        @include transition;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.7;
+            
+        }
+    }
+    &__parrafo{
+        color: colorLighten('footer-texto', 15);
+        width: 90%;
+        max-width: $limit-width;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 10px;
+        font-weight: lighter;
+    }
+    &__contacto{
+        position: absolute;
+        right: 0;
+        top: -90px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: breakpoints('ipad-pequeña')){
+    .footer{
+        background: color('primario');
+        position: relative;
+        &__contenedor{
+            flex-direction: column;
+        }
+        &__item{
+            width: 100%;
+        }
+        &__redes{
+            width: 100%;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        &__contacto{
+            display: none;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: color('boton-verde');
+            top: 0;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: color('boton-verde');
+            top: 10px; 
+        }
+        &__iconos{
+            width: 28px;
+            height: 28px;
+        }
+    }
+    
+}
+

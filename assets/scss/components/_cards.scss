@@ -1,0 +1,134 @@
+.card{
+    width: 33.3333%;
+    background: color('primario');
+    &--color{
+        background: color('naranja');
+        width: 31%;
+        box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+    }
+    &--width{
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__contenedor-principal{
+        display: flex;
+        gap: 20px;
+        margin-top: $padding-top;
+        &--recetas{
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+        }
+    }
+    &_contenedor-imagen{
+        width: 100%;
+    }
+    &__imagen-receta{
+        width: 100%;
+        &--display{
+            display: block;
+        }
+        &--height{
+            display: none;
+        }
+    }
+    &__contenedor-titulo{
+        @include flex;
+        gap: 10px;
+        margin-top: 20px;
+        &--left{
+            justify-content: flex-start;
+            width: 80%;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+        &--bottom{
+            padding-bottom: $padding-top;
+        }
+    }
+    &__titulo{
+        color: color('naranja');
+        font-size: font('card-descripcion');
+        font-weight: bolder;
+        &--color{
+            color: color('primario');
+        }
+    }
+    &__subtitulo{
+        margin: 10px 0;
+        font-size: font('card-subtitulo');
+        color: color('secundario');
+        &--color{
+            color: color('primario');
+        }
+        &--font{
+            font-size: font('subtitulos-recetas');
+        }
+    }
+    &__descripcion{
+        font-size: font('card-descripcion');
+        color: colorLighten('footer-texto', 5);
+    }
+    &__contenedor-contenido{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 40px;
+        &--bottom{
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}
+
+//modificar carrusel
+
+.carousel__lista--recetas .glider-track{
+    gap: 20px !important;
+}
+@media (max-width:breakpoints('ipad-grande')){
+    .card{
+        &--color{
+            width: 48%;
+        }
+        &--width{
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__imagen-receta{
+            &--height{
+                min-height: 250px;
+                display: block;
+            }
+            &--display{
+                display: none;
+            }
+        }
+        &__contenedor-titulo{
+            &--bottom{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: breakpoints('celular')){
+    .carousel__lista--recetas .glider-track{
+        gap: 0 !important;
+    }
+    .card{
+        &--color{
+            width: 100%;
+        }
+        &__contenedor-principal{
+            &--recetas{
+                gap: 0;
+            }
+        }
+        &--color{
+            margin-top: 10px;
+        }
+    }
+
+}
