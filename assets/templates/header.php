@@ -19,7 +19,7 @@
             <a href="./index.php" class="header__items">
                 Inicio
             </a>
-            <a href="./recetas.php" class="header__items">
+            <a href="./recetas.php" class="header__items header__recetas">
                 Recetas
             </a>
             <a href="./blog.php"class="header__items">

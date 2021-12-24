@@ -31,7 +31,7 @@
 <!-- recetas -->
 <div class="recetas__contenedor">
     <div class="card__contenedor-principal card__contenedor-principal--recetas">
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/desayuno.png" alt="" class="card__imagen-receta">
             </a>
@@ -43,7 +43,7 @@
                 <p class="card__titulo card__titulo card__titulo--color">Desayuno</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/almuerzo.png" alt="" class="card__imagen-receta">
             </a>
@@ -55,7 +55,7 @@
                 <p class="card__titulo card__titulo--color">Almuerzo</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/cena.png" alt="" class="card__imagen-receta">
             </a>
@@ -67,7 +67,7 @@
                 <p class="card__titulo card__titulo--color">Cena</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/desayuno.png" alt="" class="card__imagen-receta">
             </a>
@@ -79,7 +79,7 @@
                 <p class="card__titulo card__titulo card__titulo--color">Desayuno</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/almuerzo.png" alt="" class="card__imagen-receta">
             </a>
@@ -91,7 +91,7 @@
                 <p class="card__titulo card__titulo--color">Almuerzo</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/cena.png" alt="" class="card__imagen-receta">
             </a>
@@ -103,7 +103,7 @@
                 <p class="card__titulo card__titulo--color">Cena</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/desayuno.png" alt="" class="card__imagen-receta">
             </a>
@@ -115,7 +115,7 @@
                 <p class="card__titulo card__titulo card__titulo--color">Desayuno</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/almuerzo.png" alt="" class="card__imagen-receta">
             </a>
@@ -127,7 +127,43 @@
                 <p class="card__titulo card__titulo--color">Almuerzo</p>
             </div>
         </div>
-        <div class="card card--color" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
+            <a href="./recetas-interna.php" class="card__contenedor-imagen">
+                <img src="assets/images/cena.png" alt="" class="card__imagen-receta">
+            </a>
+            <div class="card__contenedor-contenido card__contenedor-contenido--bottom">
+                <h2 class="card__subtitulo card__subtitulo--color">Lorem, ipsum dolor.</h2>
+            </div>
+            <div class="card__contenedor-titulo card__contenedor-titulo--left">
+                <img src="assets/images/moon-white.svg" alt="" class="card__icono">
+                <p class="card__titulo card__titulo--color">Cena</p>
+            </div>
+        </div>
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
+            <a href="./recetas-interna.php" class="card__contenedor-imagen">
+                <img src="assets/images/desayuno.png" alt="" class="card__imagen-receta">
+            </a>
+            <div class="card__contenedor-contenido card__contenedor-contenido--bottom">
+                <h2 class="card__subtitulo card__subtitulo--color">Lorem, ipsum dolor.</h2>
+            </div>
+            <div class="card__contenedor-titulo card__contenedor-titulo--left">
+                <img src="assets/images/coffee-white.svg" alt="" class="card__icono">
+                <p class="card__titulo card__titulo card__titulo--color">Desayuno</p>
+            </div>
+        </div>
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
+            <a href="./recetas-interna.php" class="card__contenedor-imagen">
+                <img src="assets/images/almuerzo.png" alt="" class="card__imagen-receta">
+            </a>
+            <div class="card__contenedor-contenido card__contenedor-contenido--bottom">
+                <h2 class="card__subtitulo card__subtitulo--color">Lorem, ipsum dolor.</h2>
+            </div>
+            <div class="card__contenedor-titulo card__contenedor-titulo--left">
+                <img src="assets/images/sun-white.svg" alt="" class="card__icono">
+                <p class="card__titulo card__titulo--color">Almuerzo</p>
+            </div>
+        </div>
+        <div class="card card--color card__recorrer" data-aos="fade-up" data-aos-duration="1000">
             <a href="./recetas-interna.php" class="card__contenedor-imagen">
                 <img src="assets/images/cena.png" alt="" class="card__imagen-receta">
             </a>
@@ -140,12 +176,22 @@
             </div>
         </div>
         <div class="boton__contenedor" data-aos="fade-up" data-aos-duration="1000">
-            <button class="boton boton--relative boton--recetas">
+            <button class="boton boton--relative boton--recetas boton-show-more">
                 <a class="boton__link">CARGAR MÁS RECETAS</a>    
             </button>
+            <div class="loader__contenedor">
+                <div class="loader">
+                    <span class="loader__span"></span>
+                    <span class="loader__span"></span>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
+
+
+<script src="assets/js/paginador.js"></script>
 <?php
 include 'assets/templates/footer.php';
 ?>

@@ -1,6 +1,7 @@
 .card{
     width: 33.3333%;
     background: color('primario');
+    transition: .3s all ease;
     &--color{
         background: color('naranja');
         width: 31%;
@@ -80,6 +81,12 @@
             margin-bottom: 0;
             text-align: left;
         }
+    }
+    &.hidden-card{
+        height: 0;
+        transform: translateY(1);
+        opacity: 0 !important;
+        pointer-events: none;
     }
 }
 

@@ -75,6 +75,9 @@ body {
 .header__items:focus::after {
   width: 100%;
 }
+.header__recetas.active::after {
+  width: 100%;
+}
 
 @media screen and (max-width: 768px) {
   .header__ctn {
@@ -527,6 +530,7 @@ body {
 }
 .boton__contenedor {
   padding: 40px 0;
+  position: relative;
 }
 .boton__contenedor--blog {
   text-align: center;
@@ -535,6 +539,11 @@ body {
 .boton__contenedor--recetas {
   padding: 0;
   padding-top: 40px;
+}
+.boton.hidden-button {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
 }
 
 @media (max-width: 768px) {
@@ -614,6 +623,7 @@ body {
 .card {
   width: 33.3333%;
   background: #fff;
+  transition: 0.3s all ease;
 }
 .card--color {
   background: #F19451;
@@ -697,6 +707,12 @@ body {
 .card__contenedor-contenido--bottom {
   margin-bottom: 0;
   text-align: left;
+}
+.card.hidden-card {
+  height: 0;
+  transform: translateY(1);
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .carousel__lista--recetas .glider-track {
@@ -964,7 +980,7 @@ body {
   height: 45px;
   line-height: 45px;
   padding: 0 60px;
-  transition: 0.3s all;
+  transition: 0.2s all ease;
 }
 .formulario__input:focus {
   border: 2px solid #F19451;
@@ -1087,6 +1103,59 @@ body {
   }
   .formulario__mensaje {
     margin-bottom: 20px;
+  }
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  padding: 0px;
+  text-align: left;
+}
+.loader__contenedor {
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+  transition: 0.3s all ease;
+  opacity: 0;
+}
+.loader__contenedor.active {
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+.loader__span {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #F19451;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+}
+.loader__span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0;
   }
 }
 .buscador {

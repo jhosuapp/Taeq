@@ -46,6 +46,11 @@
             width: 100%;
         }
     }
+    &__recetas.active{
+        &::after{
+            width: 100%;
+        }
+    }
 }
 @media screen and (max-width: breakpoints('ipad-pequeña')){
     .header__ctn{
